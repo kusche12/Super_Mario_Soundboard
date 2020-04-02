@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Drum Machine</title>
+</head>
+<body>
+    <div class="page-wrap">
+        <div id="drum-machine">
+            <div id="pads">
+                <button class="drum-pad" id="1-up" onclick="playSound('1up.wav', 81)"><img src="./img/1up.jpg" alt="1-up" class="drum-pic"><p class="keystroke">Q</p></button>
+                <button class="drum-pad" id="jump-1" onclick="playSound('jump-1.wav', 87)"><img src="./img/jump1.jpg" alt="Jump 1" class="drum-pic"><p class="keystroke">W</p></button>
+                <button class="drum-pad" id="jump-2" onclick="playSound('jump-2.wav', 69)"><img src="./img/jump2.png" alt="Jump 2" class="drum-pic"><p class="keystroke">E</p></button>
+                <button class="drum-pad" id="bowser" onclick="playSound('bowser.wav', 65)"><img src="./img/bowser.jpg" alt="Bowser" class="drum-pic"><p class="keystroke">A</p></button>
+                <button class="drum-pad" id="power-up" onclick="playSound('power-up.wav', 83)"><img src="./img/powerup.jpg" alt="Power up" class="drum-pic"><p class="keystroke">S</p></button>
+                <button class="drum-pad" id="power-up-2" onclick="playSound('power-up-2.wav', 68)"><img src="./img/powerup2.jpg" alt="Power up 2" class="drum-pic"><p class="keystroke">D</p></button>
+                <button class="drum-pad" id="pipe" onclick="playSound('pipe.wav', 90)"><img src="./img/pipe.jpg" alt="pipe.jpg" class="Pipe"><p class="keystroke">Z</p></button>
+                <button class="drum-pad" id="fireball" onclick="playSound('fireball.wav', 88)"><img src="./img/fireball.jpg" alt="Fireball" class="drum-pic"><p class="keystroke">X</p></button>
+                <button class="drum-pad" id="coin" onclick="playSound('coin.wav', 67)"><img src="./img/coin.png" alt="Coin" class="drum-pic"><p class="keystroke">C</p></button>
+            </div>
+            <div id="controls">
+                <div id="power">
+                    <h3 class="control-desc">Power</h3>
+                    <div id="power-button" onclick="togglePower()">
+                        <div id="power-toggle"></div> <!-- Moves float on click -->
+                    </div>
+                </div>
+
+                <div id="sound-type">
+                    <h3 id="display"></h3>
+                </div>
+
+                <div id="volume">
+                    <h3 class="control-desc">Volume</h3>
+                    <input type="range" id="volume-level" step="1" min="0" max="100" value="50">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
